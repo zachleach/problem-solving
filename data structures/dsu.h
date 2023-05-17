@@ -23,7 +23,7 @@ class dsu {
                                 return false;
                         }
                         
-                        if(sizes[a] > sizes[b]) {
+                        if (sizes[a] > sizes[b]) {
                                 swap(a, b);
                         }
                         parents[a] = b;
