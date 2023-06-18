@@ -14,7 +14,7 @@ int main() {
                 vector<int> vec(n);
                 for (auto &x : vec) cin >> x;
 
-                vec.resize(unique(vec.begin(), vec.end() - vec.begin()));
+                vec.resize(unique(vec.begin(), vec.end()) - vec.begin());
                 n = (int) vec.size();
 
                 int ans = 0;
