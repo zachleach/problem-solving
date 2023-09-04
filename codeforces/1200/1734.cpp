@@ -16,7 +16,7 @@ int main() {
                 string t; cin >> t;
                 t = '1' + t;
 
-                int counter = 0;
+                long long counter = 0;
                 for (int i = 1; i < n + 1; i++) {
                         // if i not in t
                         if (t[i] == '0') {
@@ -31,14 +31,9 @@ int main() {
                                         j++;
                                 }
                         }
-
-                        if (s == t) {
-                                break;
-                        }
                 }
 
                 cout << counter << endl;
-
         }
 }
 
