@@ -1,20 +1,22 @@
 #!/bin/bash
 
 # check if a filename is provided as a command-line argument
-if [ $# -eq 0 ]; then
-    echo "Usage: ./add.sh <filename>"
+if [ $# -ne 2 ]; then
+    echo "Usage: ./add.sh <filename> <file extension>"
     exit 1
 fi
 
 # capture the provided filename
 filename="$1"
+extension="$2"
+file="${filename}.${extension}"
 
 # read file contents
-cat > "$filename"
+cat > "$file"
 
 # perform git operations
 git add .
-git commit -m "add $filename"
+git commit -m "add ${file}"
 git push
 
 # clear the terminal output
