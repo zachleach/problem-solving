@@ -9,6 +9,9 @@ fi
 # Capture the provided filename
 filename="$1"
 
+# Read file contents
+cat > "$filename"
+
 # Perform Git operations
 git add .
 git commit -m "add $filename"
