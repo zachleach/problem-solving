@@ -11,6 +11,8 @@ filename="$1"
 extension="$2"
 file="${filename}.${extension}"
 
+echo "Paste file contents"
+
 # read file contents
 cat > "$file"
 
