@@ -1,0 +1,85 @@
+what is this replacement operation
+how does the replacement operation not give n - 1 elements ?
+
+oh it does
+
+how does -3 + 5 give 8
+
+
+
+
+
+small - big = negative
+big - small = small
+small - big negative = big
+big - big negative = best case
+
+
+
+>	when is reversing the right move
+>	what are the optimal positions for subtraction
+
+solve for problem without reversing as an operation
+
+
+
+intuitively, it looks like you just want to generate big numbers
+
+a, b, c, -44, -62 
+
+you can compute the replacement sum for both the reversed and non-reversed version
+but how do you know if the larger of the two is actually optimal later on
+
+greedy would be, whichever has the largest absolute sum
+subtract a big negative in future steps gives a big positive
+
+
+(pos - pos) and (neg - neg) smaller than (pos - neg) and (neg - pos)
+
+
+
+
+when you perform the replacement on a decreasing sequence, you get a bunch of 1s
+
+5 4 3 --> 1 1
+3 4 5 --> 1 1
+
+-5 4 -3 --> 9 -7 --> 16
+5 -4 3 --> -9 7 --> 16
+
+alternating sequences give better results
+it looks like you're trying to maximize the differences between a[i] and a[i + 1]
+
+
+
+
+
+you're replacing with all the differences
+how do you maximize the differences
+
+how can the differences be increased
+
+
+
+
+---
+
+
+#	2025.02.06 06:45
+>	"the sum of the differences is a[n] - a[1] solves this"
+i don't see how that solves this
+
+
+there's an approach that considers hypothetical sequences of operations
+https://codeforces.com/blog/entry/138866?#comment-1241673
+
+
+>	"it is enough to perform operation 2 and take the absolute value of the sum at each step"
+https://codeforces.com/blog/entry/138866?#comment-1241581
+
+
+i do not comprehend the editorial
+https://codeforces.com/blog/entry/138866?#comment-1241673
+
+
+

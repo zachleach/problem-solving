@@ -1,0 +1,84 @@
+2025.03.24 08:15
+x, n, m < 10e9
+
+n first operations 
+m second operations
+any order
+
+find min and max possible value after all operations
+
+
+operation 1
+just floor x / 2 ?
+
+operation 2
+ceil x / 2 ?
+
+5 / 2
+1 2 3 4 5
+  ^ ^
+  1 2
+
+
+
+log_2(10e9) 
+
+10e9 operations in total
+that in itself means you can't simulate
+
+
+suppose you only had one operation
+what observations are there to be made
+after that, what if you made all operations after another
+consider even and odd numbers
+
+
+
+
+number of operations > log_2(N) 
+
+
+floor[log_2(N)]
+
+
+
+when does something go from odd to even
+when does something go from even to odd
+
+(odd / 2) gives what
+(even / 2) gives what 
+it depends
+
+
+---
+
+an operation where x / 2 gives an integer is effectively a no-op
+call this a no-op
+
+each operation has the potential to increase or decrease the sum by 0.5 
+potential as in: when x / 2 gives a floating point value
+
+
+
+how to maximize 
+if x / 2 is a no-op: 
+	use op-2
+else: 
+	use op-1
+
+cool bro; but obviously you can't simulate this 
+oh wait no, maybe you can ?
+
+
+
+a more important question is also
+assume you're trying to maximize
+suppose there are more op-2 than there are no-ops
+does it matter where in the sequence of divisions you place your op-2s
+e.g., is it better to save op-2 for the end, or is it better to do them earlier on?
+
+even numbers over 2 give no-ops
+odd numbers over 2 give ops
+
+i guess its are you able to solve this by just picking the optimal choice at each step
+or does the best choice at some step mean you generate less number of odds which means less increases (type shit)
